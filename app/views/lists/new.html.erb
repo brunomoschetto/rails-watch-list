@@ -1,0 +1,13 @@
+<h1>Crear una nueva lista</h1>
+
+<%= simple_form_for @list do |form| %>
+  <div class="field">
+    <%= form.input :name, label: "List name" %>
+  </div>
+
+  <div class="actions">
+    <%= form.button :submit, "Create list", class: "btn btn-primary" %>
+  </div>
+<% end %>
+
+<%= link_to "Back to lists view", lists_path %>
