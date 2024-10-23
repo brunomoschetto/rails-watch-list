@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem "dotenv-rails"
+
 ruby "3.3.5"
 
 gem "bootstrap", "~> 5.2"
