@@ -1,32 +1,14 @@
-  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="container-fluid">
-    <%= link_to root_path, class: "navbar-brand" do %>
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" alt="App Logo" />
-    <% end %>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto">
-        <li class="nav-item active">
-          <%= link_to 'Home', root_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to 'New List', new_list_path, class: "nav-link" %>
-        </li>
-      </ul>
-    </div>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= image_path("movie_img.jpg") %>');">
+  <div class="container">
+    <h1>My movie lists</h1>
+    <p>Change your life and organize your movies with this awesome web app</p>
   </div>
 </div>
 
 <div class="container">
-  <h1>My movie lists</h1>
-
   <div class="lists-section">
     <% @lists.each do |list| %>
-      <div class="list-card">
+      <div class="list-card" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= list.photo.attached? ? cl_image_path(list.photo.key) : image_path("movie_img.jpg") %>');background-size: cover; background-position: center; background-repeat: no-repeat;">
         <p class="list-card-text"><%= list.name %></p>
         <div class="button-container">
           <%= link_to "See details", list_path(list), class: "btn btn-primary" %>

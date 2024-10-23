@@ -4,7 +4,7 @@
   background-color: #28a745;
   color: white;
   border-radius: 5px;
-  margin-top: 20px;
+  margin: 20px;
   font-weight: bold;
   text-decoration: none;
   &:hover {
@@ -27,4 +27,6 @@
 
 .button-container {
   margin: 10px;
+  display: flex;
+  flex-direction: column;
 }

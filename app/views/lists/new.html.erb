@@ -5,6 +5,10 @@
     <%= form.input :name, label: "List name" %>
   </div>
 
+  <div class="field">
+    <%= form.input :photo, as: :file %>
+  </div>
+
   <div class="actions">
     <%= form.button :submit, "Create list", class: "btn btn-primary" %>
   </div>
