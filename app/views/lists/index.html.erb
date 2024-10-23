@@ -1,10 +1,39 @@
-<h1>Lists available: </h1>
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" alt="App Logo" />
+    <% end %>
 
-<% @lists.each do |list| %>
-  <div class="container">
-    <p><strong>List name:</strong> <%= list.name %></p><br>
-    <%= link_to "List details", list_path(list), class: "btn btn-warning" %>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item active">
+          <%= link_to 'Home', root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'New List', new_list_path, class: "nav-link" %>
+        </li>
+      </ul>
+    </div>
   </div>
-<% end %>
+</div>
 
-<%= link_to "Add a new list", new_list_path, class: "btn btn-success" %>
+<div class="container">
+  <h1>My movie lists</h1>
+
+  <div class="lists-section">
+    <% @lists.each do |list| %>
+      <div class="list-card">
+        <p class="list-card-text"><%= list.name %></p>
+        <div class="button-container">
+          <%= link_to "See details", list_path(list), class: "btn btn-primary" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <%= link_to "Create a movie list", new_list_path, class: "btn btn-success" %>
+</div>

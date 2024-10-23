@@ -1,0 +1,30 @@
+.btn-success {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border-radius: 5px;
+  margin-top: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover {
+    background-color: #218838;
+  }
+}
+
+.btn-warning {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ffc107;
+  color: black;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  &:hover {
+    background-color: #e0a800;
+  }
+}
+
+.button-container {
+  margin: 10px;
+}

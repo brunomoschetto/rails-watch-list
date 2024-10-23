@@ -2,6 +2,8 @@ source "https://rubygems.org"
 
 gem "dotenv-rails"
 
+gem "cloudinary"
+
 ruby "3.3.5"
 
 gem "bootstrap", "~> 5.2"
