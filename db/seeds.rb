@@ -1,12 +1,7 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
-#   end
+puts "Destroying previous movies"
+Movie.destroy_all
+
+puts "There are currently #{Movie.count} movies in the database"
 
 puts "Creating some example Movies..."
 Movie.create(title: "Wonder Woman 1984", overview: "Wonder Woman comes into conflict with the Soviet Union during the Cold War in the 1980s", poster_url: "https://image.tmdb.org/t/p/original/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg", rating: 6.9)
@@ -17,4 +12,11 @@ Movie.create(title: "The Wild Robot", overview: "After a shipwreck, an intellige
 Movie.create(title: "Alien: Romulus", overview: "While scavenging the deep ends of a derelict space station, a group of young space colonizers come face to face with the most terrifying life form in the universe.", poster_url: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/b33nnKl1GSFbao4l3fZDDqsMx0F.jpg", rating: 7.3)
 Movie.create(title: "Woman of the Hour", overview: "The stranger-than-fiction story of an aspiring actor in 1970s Los Angeles and a serial killer in the midst of a years-long murder spree, whose lives intersect when they're cast on an episode of The Dating Game.", poster_url: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nc9ZqrJFbcUdlMg9lxXXtJb24jU.jpg", rating: 5.8)
 Movie.create(title: "Smile 2", overview: "About to embark on a new world tour, global pop sensation Skye Riley begins experiencing increasingly terrifying and inexplicable events. Overwhelmed by the escalating horrors and the pressures of fame, Skye is forced to face her dark past to regain control of her life before it spirals out of control.", poster_url: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/aE85MnPIsSoSs3978Noo16BRsKN.jpg", rating: 6.3)
+Movie.create(title: "Lassie: A New Adventure", overview: "Flo and his trusted Collie pal Lassie spend the summer at Aunt Cosma's, alongside her foster children Kleo and Henry, and her dog Pippa. When local canines start disappearing, including Pippa, Lassie rallies the kids to solve the mystery.", poster_url: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/9YOwGVsDipZIVYkb3rdnUJDL9Ni.jpg", rating: 6.3)
+Movie.create(title: "Kingdom of the Planet of the Apes", overview: "Several generations following Caesar's reign, apes – now the dominant species – live harmoniously while humans have been reduced to living in the shadows. As a new tyrannical ape leader builds his empire, one young ape undertakes a harrowing journey that will cause him to question all he's known about the past and to make choices that will define a future for apes and humans alike.", poster_url: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/gKkl37BQuKTanygYQG1pyYgLVgf.jpg", rating: 7.1)
+Movie.create(title: "Venom: Let There Be Carnage", overview: "After finding a host body in investigative reporter Eddie Brock, the alien symbiote must face a new enemy, Carnage, the alter ego of serial killer Cletus Kasady.", poster_url: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/1MJNcPZy46hIy2CmSqOeru0yr5C.jpg", rating: 6.8)
+Movie.create(title: "Blood for Dust", overview: "Reckless Ricky makes serious money dealing illegal weapons throughout the tri-state area and loves to flaunt it. Traveling salesman Cliff, covers the same territory Ricky runs guns through. Desperate to find some financial relief for his struggling family, Cliff agrees to partner with Ricky, to commit cross-state drug and gun deliveries for a mid-level American cartel boss John.", poster_url: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/nvaCnkl8RilLhVAQXPFei0tqkqW.jpg", rating: 5.6)
+Movie.create(title: "My Fault", overview: "Noah must leave her city, boyfriend, and friends to move into William Leister's mansion, the flashy and wealthy husband of her mother Rafaela. As a proud and independent 17 year old, Noah resists living in a mansion surrounded by luxury. However, it is there where she meets Nick, her new stepbrother, and the clash of their strong personalities becomes evident from the very beginning.", poster_url: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/w46Vw536HwNnEzOa7J24YH9DPRS.jpg", rating: 7.9)
+Movie.create(title: "The Wolf of Wall Street", overview: "A New York stockbroker refuses to cooperate in a large securities fraud case involving corruption on Wall Street, corporate banking world and mob infiltration. Based on Jordan Belfort's autobiography.", poster_url: "https://image.tmdb.org/t/p/w600_and_h900_bestv2/34m2tygAYBGqA9MXKhRDtzYd4MR.jpg", rating: 8)
+
 puts "#{Movie.count} movies created"

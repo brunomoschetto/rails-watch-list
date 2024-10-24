@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Agregar un bookmark a la lista: <%= @list.name %></h1>
+  <h1>Add a bookmark to the list: <%= @list.name %></h1>
 
   <%= simple_form_for [@list, @bookmark] do |form| %>
     <div class="field">
@@ -15,5 +15,5 @@
     </div>
   <% end %>
 
-  <%= link_to 'Back to list page', list_path(@list), class: "btn btn-primary" %>
+  <%= link_to 'Back to list page', list_path(@list), class: "btn btn-primary correction" %>
 </div>
